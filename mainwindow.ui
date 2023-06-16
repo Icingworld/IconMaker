@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="raw">
+   <widget class="QLabel" name="rawimg">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -76,6 +76,9 @@
       <width>201</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit::disabled{background:white}</string>
     </property>
    </widget>
    <widget class="QPushButton" name="choose">

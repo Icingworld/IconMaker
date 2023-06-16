@@ -41,7 +41,7 @@ public:
     Check shapes, sizes, angles;
     int shape, size, angle;
     QString Path, path, fileName;
-    QImage img;
+    QImage img, newimg;
 
 
 private slots:

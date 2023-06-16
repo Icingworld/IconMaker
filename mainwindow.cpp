@@ -29,6 +29,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->shape1->setChecked(true);
     ui->size4->setChecked(true);
     ui->angle2->setChecked(true);
+    ui->newname->setEnabled(false);
+    ui->save->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -109,7 +111,17 @@ void MainWindow::ImgShow(QLabel * label, QImage img)
 
 void MainWindow::Process()
 {
-    ImgShow(ui->newimg, img);
+    if (img.size() != QSize(0, 0))
+    {
+        if (shape == 0)
+        {
+
+        } else {
+            newimg = img.scaled(size, size);
+        }
+        qDebug() << newimg.size();
+        ImgShow(ui->newimg, newimg);
+    }
 }
 
 
@@ -274,8 +286,10 @@ void MainWindow::on_choose_clicked()
         fileName = fileInfo.fileName();
         ui->rawname->setText(fileName);
         ui->newname->setText("logo.ico");
+        ui->newname->setEnabled(true);
+        ui->save->setEnabled(true);
         img.load(Path);
-        ImgShow(ui->raw, img);
+        ImgShow(ui->rawimg, img);
         Process();
     }
 }
@@ -288,8 +302,7 @@ void MainWindow::on_save_clicked()
         Warning("FileName necessary!");
     } else {
         QString newname = ui->newname->text();
-        qDebug() << path + "/" + newname;
-        //img.save(path + "/" + newname);
+        newimg.save(path + "/" + newname);
     }
 }
 
@@ -299,10 +312,12 @@ void MainWindow::on_clear_clicked()
     ui->shape1->setChecked(true);
     ui->size4->setChecked(true);
     ui->angle2->setChecked(true);
-    ui->raw->clear();
+    ui->rawimg->clear();
     ui->newimg->clear();
     ui->rawname->clear();
     ui->newname->clear();
+    ui->newname->setEnabled(false);
+    ui->save->setEnabled(false);
 }
 
 
