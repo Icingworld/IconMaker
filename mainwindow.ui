@@ -266,14 +266,14 @@
    <widget class="QCheckBox" name="angle2">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>550</x>
       <y>330</y>
       <width>51</width>
       <height>19</height>
      </rect>
     </property>
     <property name="text">
-     <string>45</string>
+     <string>1/3</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="angle3">
@@ -286,20 +286,20 @@
      </rect>
     </property>
     <property name="text">
-     <string>60</string>
+     <string>1/2</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="angle4">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>550</x>
       <y>360</y>
       <width>51</width>
       <height>19</height>
      </rect>
     </property>
     <property name="text">
-     <string>90</string>
+     <string>1/1</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="angle1">
@@ -312,14 +312,14 @@
      </rect>
     </property>
     <property name="text">
-     <string>30</string>
+     <string>1/4</string>
     </property>
    </widget>
    <widget class="QPushButton" name="clear">
     <property name="geometry">
      <rect>
       <x>302</x>
-      <y>228</y>
+      <y>260</y>
       <width>21</width>
       <height>20</height>
      </rect>
@@ -328,17 +328,17 @@
      <string>C</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="edit">
+   <widget class="QPushButton" name="background">
     <property name="geometry">
      <rect>
       <x>302</x>
-      <y>252</y>
-      <width>20</width>
-      <height>21</height>
+      <y>240</y>
+      <width>21</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>E</string>
+     <string>B</string>
     </property>
    </widget>
   </widget>
